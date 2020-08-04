@@ -4,10 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "yarn run rm:dist && run-p build:client build:server",
-    "build:server": "cross-env NODE_ENV=production webpack --config webpack.config.js",
-    "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.config.js",
-    "deploy": "yarn run rm:dist && yarn build:client && clasp push",
+    "start": "webpack-dev-server --hot --mode development --open --config webpack.client.js",
+    "build": "yarn run rm:dist && webpack --mode production --config webpack.client.js",
+    "deploy": "yarn run rm:dist && yarn build && clasp push",
     "rm:dist": "rimraf dist",
     "open": "clasp open"
   },
@@ -28,7 +27,8 @@
     "typescript": "^3.9.7",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.1.0"
   },
   "dependencies": {
     "@google/clasp": "^2.3.0",

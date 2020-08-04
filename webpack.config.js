@@ -1,6 +1,7 @@
 const path = require('path');
 const GasPlugin = require('gas-webpack-plugin');
 
+// serverをbuildする設定。現在は使用していません。
 module.exports = {
   mode: 'development',
   context: __dirname,

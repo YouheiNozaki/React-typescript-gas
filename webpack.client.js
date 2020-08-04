@@ -59,6 +59,9 @@ const config = {
       'react-router-dom': 'ReactRouterDOM',
     },
   ],
+  devServer: {
+    contentBase: './dist',
+  },
 };
 
 module.exports = [config, appsscriptConfig, doGetConfig];

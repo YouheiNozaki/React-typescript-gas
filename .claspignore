@@ -1,4 +1,4 @@
 **/**
 !index.html
-!doGet.js
+!doGet.ts
 !appsscript.json
