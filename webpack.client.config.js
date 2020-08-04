@@ -5,9 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackInlineSourcePlugin = require('html-webpack-inline-source-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-/*    Google Apps Script Config
-================================== */
-
+// appsscript.jsonをコピーする設定
 const appsscriptConfig = {
   entry: './appsscript.json',
   plugins: [
@@ -17,6 +15,17 @@ const appsscriptConfig = {
   ],
 };
 
+// serverにあるdoGet関数をコピーする設定
+const doGetConfig = {
+  entry: './src/gas/index.ts',
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [{ from: './src/gas/index.ts', to: './doGet.ts' }],
+    }),
+  ],
+};
+
+// Clientのコードをビルドする設定
 const config = {
   entry: './src/client/App.tsx',
   output: {
@@ -52,4 +61,4 @@ const config = {
   ],
 };
 
-module.exports = [config, appsscriptConfig];
+module.exports = [config, appsscriptConfig, doGetConfig];
