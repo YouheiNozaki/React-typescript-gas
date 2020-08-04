@@ -37,7 +37,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       inject: true,
-      inlineSource: '.(js|css¥tsx)$',
+      inlineSource: '.(js|css|tsx)$',
       template: './public/index.html',
     }),
     new HtmlWebpackInlineSourcePlugin(HtmlWebpackPlugin),

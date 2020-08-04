@@ -8,7 +8,8 @@
     "build:server": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "build:client": "cross-env NODE_ENV=production webpack --config webpack.client.config.js",
     "deploy": "yarn build && clasp push",
-    "rm:dist": "rimraf dist"
+    "rm:dist": "rimraf dist",
+    "open": "clasp open"
   },
   "keywords": [],
   "author": "",
