@@ -17,6 +17,7 @@
     "@types/google-apps-script": "^1.0.14",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
     "copy-webpack-plugin": "^6.0.3",
     "gas-webpack-plugin": "^1.0.4",
     "html-webpack-inline-source-plugin": "1.0.0-beta.2",
@@ -30,8 +31,11 @@
   },
   "dependencies": {
     "@google/clasp": "^2.3.0",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   }
 }
