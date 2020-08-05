@@ -16,26 +16,26 @@ rootディレクトリはdistになっています。
 
 ### 開発
   
-*フロントエンドをローカルで開発*  
+**フロントエンドをローカルで開発**  
 webpack-dev-serverが起動して、localhost://8080が立ち上がります。
 ~~~
 yarn start
 ~~~  
   
-*ビルド*  
+**ビルド**  
 distファイルを``rimraf``を使って削除。  
 webpackでビルドしてdist配下にバンドルされます。
 ~~~
 yarn build
 ~~~  
   
-*デプロイ*  
+**デプロイ**  
 ``yarn build``を実行して、``clasp push``でgoogleappsscriptにdeployします。
 ~~~
 yarn run deploy
 ~~~  
   
-*ファイルを開く*  
+**ファイルを開く**  
 紐づいたスクリプトエディタを開きます。 
 webアプリケーションとして実行でアプリケーションをgoogleappsscript上で実行することができます。
 ~~~
